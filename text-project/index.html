@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Open Project | Predective Power of Twitter Sentiment Analysis</title>
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/4.10.2/d3.min.js'></script>
+  <script src="assets/d3.layout.cloud.js"></script>
+  <style>
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <header>
+      <div class="header-item-left vertical-align">
+        <h1>Predective Power of Twitter Sentiment Analysis</h1>
+      </div>
+      <div class="header-item-right vertical-align">
+        <img src="assets/images/text-icon.png" class="header-logo"/>
+      </div>
+      <div class="header-item-right vertical-align">
+        <h3>Kevin Sun</h3>
+
+      </div>
+    </header>
+    <main id="page-content-wrapper">
+      <div class="sk-cube-grid" id="loader">
+        <div class="sk-cube sk-cube1"></div>
+        <div class="sk-cube sk-cube2"></div>
+        <div class="sk-cube sk-cube3"></div>
+        <div class="sk-cube sk-cube4"></div>
+        <div class="sk-cube sk-cube5"></div>
+        <div class="sk-cube sk-cube6"></div>
+        <div class="sk-cube sk-cube7"></div>
+        <div class="sk-cube sk-cube8"></div>
+        <div class="sk-cube sk-cube9"></div>
+      </div>
+      <div id="container"></div>
+      <span>Hide incorrect&nbsp;&nbsp;&nbsp;</span>
+      <label class="switch">
+        <input type="checkbox" id="slider-switch" onclick="check()">
+        <span class="slider-switch"></span>
+      </label>
+      <span>&nbsp;&nbsp;Show incorrect</span>
+      <h1>Instructions</h1>
+      <p>
+        Each point represents a science article. Hover over it to view it's actual category scraped from the website, it cluster assignment, and the article link.<br>
+        Key: <br><span style="color: #1b9e77">Cluster 0 has keywords: Sci Policy/Env Sci: trump, climate, states</span><br>
+        <span style="color: #d95f02">Cluster 1 has keywords: Neuroscience: brain, imaging, neurons</span><br>
+        <span style="color: #7570b3">Cluster 2 has keywords: Artificial Intelligence, ai, machine, data</span><br>
+        <span style="color: #e7298a">Cluster 3 has keywords: Pharmaceuticals: biotechs, dugs</span><br>
+        <span style="color: #66a61e">Cluster 4 has keywords: Immunology: cell, cancer, gene, immune, tumors, protein, parient, disease</span><br>
+
+
+    </p>
+  </main>
+</div>
+<script type="text/javascript" src="assets/script.js"></script>
+</body>
+</html>

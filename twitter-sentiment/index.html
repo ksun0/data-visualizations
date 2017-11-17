@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>CSC630 | Open Project</title>
+
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/4.10.2/d3.min.js'></script>
+
+  <style>
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <header>
+      <div class="header-item-left vertical-align">
+        <h1>Predictive Power of Twitter Sentiment Analysis</h1>
+      </div>
+      <div class="header-item-right vertical-align">
+        <img src="assets/images/twitter.png" class="header-logo"/>
+      </div>
+      <div class="header-item-right vertical-align">
+        <h3>Kevin Sun</h3>
+      </div>
+    </header>
+    <main id="page-content-wrapper">
+      <div class="sk-cube-grid" id="loader">
+        <div class="sk-cube sk-cube1"></div>
+        <div class="sk-cube sk-cube2"></div>
+        <div class="sk-cube sk-cube3"></div>
+        <div class="sk-cube sk-cube4"></div>
+        <div class="sk-cube sk-cube5"></div>
+        <div class="sk-cube sk-cube6"></div>
+        <div class="sk-cube sk-cube7"></div>
+        <div class="sk-cube sk-cube8"></div>
+        <div class="sk-cube sk-cube9"></div>
+      </div>
+      <div id="container"></div>
+      <div style="display: block; margin-bottom: 15px">
+        <label for="airline_select">Select Airline:</label>
+        <select onchange="main()" id="airline_select">
+          <option selected="selected">unitedairlines</option>
+          <option>jetblue</option>
+          <option>virginamerica</option>
+          <option>deltaairlines</option>
+          <option>southwestairlines</option>
+        </select>
+      </div>
+      <span>Neg Tweets&nbsp;&nbsp;&nbsp;</span>
+      <label class="switch">
+        <input type="checkbox" id="slider-switch" onclick="check()">
+        <span class="slider-switch"></span>
+      </label>
+      <span>&nbsp;&nbsp;Neg : Pos</span>
+      <h1>Instructions</h1>
+      <ul style="list-style-position:inside; text-align: left">
+        <li>If the date labels on the x-axis are too small, please view on a large screen!</li>
+        <li>Select the airline you want to graph the sentiment of.</li>
+        <li>The date range will go from as early as 2017-03-31 to as late as 2017-10-01. Some airlines don't have enough tweets.</li>
+        <li>View the number of negative tweets over time! <b>For example, here is a major incident that happened on July 5th: <a target="_blank" href="https://www.nbcnews.com/news/us-news/united-airlines-forces-mom-hold-toddler-entire-flight-n779731">link</a>. Or Delta May 4th: <a href="https://www.washingtonpost.com/news/dr-gridlock/wp/2017/05/04/family-booted-from-delta-flight-and-threatened-with-jail-after-refusing-to-give-up-toddlers-seat/?utm_term=.fcc13b86fa79" target="_blank">link</a></b></li>
+        <li>It seems that the relative number of tweets accurately represents a drop in United's brand. To make sure the number of positive tweets line up as well, you can switch the y-axis to the ratio of neg:pos tweets.</li>
+      </ul>
+    </main>
+  </div>
+  <script type="text/javascript" src="assets/script.js"></script>
+</body>
+</html>

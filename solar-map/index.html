@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Maps Project | Solar Panels</title>
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/4.10.2/d3.min.js'></script>
+  <script src="https://d3js.org/topojson.v2.min.js"></script>
+</head>
+<body>
+  <div id="wrapper">
+    <header>
+      <div class="header-item-left vertical-align">
+        <h1>Solar Panel Data for MA</h1>
+        See Instructions at Bottom of Page After Playing Around First!
+      </div>
+      <div class="header-item-right vertical-align">
+        <img src="assets/images/solar-icon.png" class="header-logo"/>
+      </div>
+      <div class="header-item-right vertical-align">
+        <h3>Eric You, Kevin Sun</h3>
+      </div>
+    </header>
+    <main id="page-content-wrapper">
+      <div class="sk-cube-grid" id="loader">
+        <div class="sk-cube sk-cube1"></div>
+        <div class="sk-cube sk-cube2"></div>
+        <div class="sk-cube sk-cube3"></div>
+        <div class="sk-cube sk-cube4"></div>
+        <div class="sk-cube sk-cube5"></div>
+        <div class="sk-cube sk-cube6"></div>
+        <div class="sk-cube sk-cube7"></div>
+        <div class="sk-cube sk-cube8"></div>
+        <div class="sk-cube sk-cube9"></div>
+      </div>
+      <div id="container"></div>
+      <span>GHI&nbsp;&nbsp;&nbsp;</span>
+      <label class="switch">
+        <input type="checkbox" id="slider-switch" onclick="changeSolarChoice()">
+        <span class="slider-switch"></span>
+      </label>
+      <span>&nbsp;&nbsp;TEMP</span>
+      <label id="weekLabel" for="week" style="margin-top: 15px"></label>
+      <input type="range" min="1" max="52" value="1" class="slider" id="week" name="week" list="steplist">
+      <datalist id="steplist">
+        <!-- Unsupported in Chrome -->
+      </datalist>
+      <label id="hourLabel" for="hour"></label>
+      <input type="range" min="1" max="13" value="1" class="slider" id="hour" name="hour">
+      <div id="info"></div>
+      <h1 style="margin-top: 60px">Instructions</h1>
+      <p>
+        Click on a coordinate to get started and see more information.<br>
+        The first chart plots the entire years solar data for the selected point at the selected hour<br>
+        The second chart plots the entire selected days solar data for the selected point<br>
+        Color of circle on the main svg represents the Global Horizontal Irradiance (GHI) at that coordinate. White means low GHI, black means high GHI.<br>
+        Move the week/hour sliders to see GHI over time! The below graphs will also move along time.<br>
+        Click the switch to see Temperature over time! <b>NOTE: coming soon!</b><br>
+        See Jupyter Notebook for more information about GHI, Temperature values, and the overall dataset.
+      </p>
+    </main>
+  </div>
+  <script type="text/javascript" src="assets/script.js"></script>
+</body>
+</html>
