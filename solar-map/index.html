@@ -14,13 +14,12 @@
     <header>
       <div class="header-item-left vertical-align">
         <h1>Solar Panel Data for MA</h1>
-        See Instructions at Bottom of Page After Playing Around First!
       </div>
       <div class="header-item-right vertical-align">
         <img src="assets/images/solar-icon.png" class="header-logo"/>
       </div>
       <div class="header-item-right vertical-align">
-        <h3>Eric You, Kevin Sun</h3>
+        <h3>Kevin Sun</h3>
       </div>
     </header>
     <main id="page-content-wrapper">
@@ -36,13 +35,13 @@
         <div class="sk-cube sk-cube9"></div>
       </div>
       <div id="container"></div>
-      <span>GHI&nbsp;&nbsp;&nbsp;</span>
-      <label class="switch">
+      <span style="visibility: hidden;">GHI&nbsp;&nbsp;&nbsp;</span>
+      <label class="switch" style="visibility: hidden;">
         <input type="checkbox" id="slider-switch" onclick="changeSolarChoice()">
         <span class="slider-switch"></span>
       </label>
-      <span>&nbsp;&nbsp;TEMP</span>
-      <label id="weekLabel" for="week" style="margin-top: 15px"></label>
+      <span style="visibility: hidden;">&nbsp;&nbsp;TEMP</span>
+      <label id="weekLabel" for="week"></label>
       <input type="range" min="1" max="52" value="1" class="slider" id="week" name="week" list="steplist">
       <datalist id="steplist">
         <!-- Unsupported in Chrome -->

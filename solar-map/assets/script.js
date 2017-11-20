@@ -124,7 +124,7 @@ function refreshGraphs() {
   // ******* Variables *******
   var domRect = document.getElementById("container").getBoundingClientRect();
   width = domRect.width;
-  height = 500;
+  height = 450;
   // ******* Create SVG *******
   svg = d3.select("#container").append("svg")
   .attr("width", width)
@@ -224,7 +224,7 @@ function makeGraph() {
   .style('text-anchor', 'middle');
 
   // initialize first text-info
-  var g = svg_info.append("g").append("text").text('Latitude: ' + dataset[0]['coords'].split('_')[0] + ' -- Longitude: ' + dataset[0]['coords'].split('_')[1])
+  var g = svg_info.append("g").append("text").text('GHI (Global Horizontal Irradiance) Throughout the Year (1) and Throughout the Day (2) for Coordinate: (' + dataset[0]['coords'].split('_')[0] + ', ' + dataset[0]['coords'].split('_')[1] + ')')
   .attr("transform", `translate(0, 15)`)
   .attr("id", "textDisplay")
 
@@ -265,7 +265,7 @@ function makeGraph() {
     refreshData()
     $('#textDisplay').remove();
     // Display current values
-    var g = svg_info.append("g").append("text").text('Latitude: ' + d['coords'].split('_')[0] + ' -- Longitude: ' + d['coords'].split('_')[1])
+    var g = svg_info.append("g").append("text").text('GHI (Global Horizontal Irradiance) Throughout the Year (1) and Throughout the Day (2) for Coordinate: (' + d['coords'].split('_')[0] + ', ' + d['coords'].split('_')[1] + ')')
     .attr("transform", `translate(0, 15)`)
     .attr("id", "textDisplay")
   })
