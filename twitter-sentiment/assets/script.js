@@ -7,7 +7,7 @@ var deltaairlines_data = []
 var southwestairlines_data = []
 var svg, div, width, height; // global D3/SVG elements
 var airline_selection;
-var y_axis = "Number of Negative Tweets"; // number of negative tweets or ratio of neg:pos on y axis
+var y_axis = "Number of Negative Tweets for United Airlines"; // number of negative tweets or ratio of neg:pos on y axis
 var dict = {'unitedairlines': unitedairlines_data, 'jetblue': jetblue_data, 'virginamerica': virginamerica_data,
 'deltaairlines': deltaairlines_data, 'southwestairlines': southwestairlines_data}
 
@@ -209,11 +209,11 @@ function check() { // show the incorrectly categorized articles
   checkbox = document.getElementById("slider-switch");
   if (checkbox.checked) // true means it is checked (slider to right)
   {
-    y_axis = "Ratio of Negative to Positive Tweets"
+    y_axis = "Ratio of Negative to Positive Tweets for " + airline_selection
     generateGraph()
   }
   else {
-    y_axis = "Number of Negative Tweets"
+    y_axis = "Number of Negative Tweets for " + airline_selection
     generateGraph()
   }
 }
