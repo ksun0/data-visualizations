@@ -3,6 +3,8 @@ Repository for all my D3 Data-Viz Projects
 
 View the projects here: https://ksun0.github.io/data-visualizations/. Special thanks to HTML5 UP! for providing the beautiful landing page.
 
+**Data processing and models I used are available in the Jupyter Notebooks of each project folder!**
+
 1. Solar Map of Massachusetts
   * View the degrees of solar radiation (GHI) at various coordinates in Massachusetts.
   * Move the time slider to see GHI over time during the year of 2015!
